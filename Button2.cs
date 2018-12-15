@@ -20,7 +20,7 @@ public class Button2 : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (triggered) {
-			wall.transform.Translate (0, 3, 0);
+			wall.transform.Translate (0, 4, 0);
 			triggered = false;
 			}
 	}

@@ -10,10 +10,12 @@ public class pushBlock : MonoBehaviour {
 		if (col.gameObject.tag == "Player") {
 			Vector3 dir = -col.gameObject.transform.position;
 
-			if (Input.GetMouseButton (1)) {
+			if (Input.GetMouseButtonUp (1) && col.gameObject.GetComponent<PlayerMovement>().controlInt == 2) {
 				GetComponent<Rigidbody> ().AddForce (dir * force);
-			} else {
-				GetComponent<Rigidbody> ().Sleep();
+			} 
+
+			else {
+				//GetComponent<Rigidbody> ().Sleep();
 			}
 
 		}

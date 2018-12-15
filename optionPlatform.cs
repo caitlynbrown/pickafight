@@ -22,6 +22,8 @@ public class optionPlatform : MonoBehaviour {
 			Debug.Log (assignedOption);
 			movement = col.gameObject.GetComponent<PlayerMovement> ();
 			movement.controlInt = assignedOption;
+			col.gameObject.GetComponent<SkinnedMeshRenderer> ().material.color = this.gameObject.GetComponent<MeshRenderer>().material.color;
+			//Debug.Log (col.gameObject.GetComponent<MeshRenderer> ().material.color);
 		}
 	}
 }
